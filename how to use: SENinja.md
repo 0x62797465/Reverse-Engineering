@@ -22,3 +22,5 @@
 12. Now run either DFS or BFS, both should work:\
 ![image](https://github.com/Boberttt/Reverse-Engineering/assets/104478197/8bc6f462-bee6-4593-a674-cf1bf08954ec)
 13. Wait
+14. Once done, go to buffers and right click, press evalulate as bytes, and profit:\
+![image](https://github.com/Boberttt/Reverse-Engineering/assets/104478197/005c6deb-9c20-4da0-8063-82d9e6d8b0e8)
