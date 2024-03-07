@@ -24,3 +24,5 @@
 13. Wait
 14. Once done, go to buffers and right click, press evalulate as bytes, and profit:\
 ![image](https://github.com/Boberttt/Reverse-Engineering/assets/104478197/005c6deb-9c20-4da0-8063-82d9e6d8b0e8)
+
+Yay we did it! Your experience may differ for your binary, you may have to make a buffer for replacing all of the stack, you may need to manually emulate some calls because YOU CAN NOT MAKE SYSTEM CALLS WITH SENINJA!
