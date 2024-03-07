@@ -1,6 +1,6 @@
 1. install SEninja:\
 ![image](https://github.com/Boberttt/Reverse-Engineering/assets/104478197/bca49d5e-9fd1-4e12-aaca-43564ad4c408)
-2. open your binary, I will be using a file named a.exe, which is in this github.
+2. open your binary, I will be using a file named a.exe, which is in this github repo.
 3. Go to the SENinja window:\
 ![image](https://github.com/Boberttt/Reverse-Engineering/assets/104478197/b57fbff9-8865-4405-a9db-c56cc163cdb8)
 4. Identify where you want to start execution, for me it will be here due to me being able to replace the non-existent buffer with my symbolic buffer:\
