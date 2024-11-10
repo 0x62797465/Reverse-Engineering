@@ -69,7 +69,7 @@ do
 return 1;
 
 ```
-So it seems our input is just lAmBdA + 0x0302030205. We can find these values using the single python line: 
+So it seems our input is just lAmBdA + 0x0203020305. We can find these values using the single python line: 
 ```py
 print(chr(ord('l') + 2) + chr(ord('A') + 3) + chr(ord('m') + 2) + chr(ord('B') + 3) + chr(ord('d') + 5) + chr(ord('A')))
 ```
