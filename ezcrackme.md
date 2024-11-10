@@ -1,5 +1,5 @@
 # Background
-<picture of message>
+![image](https://github.com/user-attachments/assets/028bc282-e819-4b17-a885-3376aa0f1e7c)
 Someone was looking at a crackme I made and said this. So I looked throughout dozens of discord servers and found a crackme that *they* made. 
 
 # Unpacking
