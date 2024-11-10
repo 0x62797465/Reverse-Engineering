@@ -3,11 +3,11 @@
 Someone was looking at a crackme I made and said this. So I looked throughout dozens of discord servers and found a crackme that *they* made. 
 
 # Unpacking
-With DIE we can see that it uses:
-`Packer: UPX(3.95)[NRV2E_LE32,brute,Modified(53554f4d)]`
-This shows that the binary is packed with a **modified** version of upx, this means that we can't use upx to statically unpack it. When we try to unpack it we get the message:
-`upx: crackme2: NotPackedException: not packed by UPX`
-Let's try dynamic unpacking! First, I'll open the binary in a arch linux docker image and see what it calls using strace:
+With DIE we can see that it uses:\
+`Packer: UPX(3.95)[NRV2E_LE32,brute,Modified(53554f4d)]`\
+This shows that the binary is packed with a **modified** version of upx, this means that we can't use upx to statically unpack it. When we try to unpack it we get the message:\
+`upx: crackme2: NotPackedException: not packed by UPX`\
+Let's try dynamic unpacking! First, I'll open the binary in a arch linux docker image and see what it calls using strace:\
 ```
 ...
 mprotect(0x4bd000, 12288, PROT_READ)    = 0
