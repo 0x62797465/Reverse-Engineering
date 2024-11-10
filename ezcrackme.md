@@ -7,7 +7,7 @@ With DIE we can see that it uses:\
 `Packer: UPX(3.95)[NRV2E_LE32,brute,Modified(53554f4d)]`\
 This shows that the binary is packed with a **modified** version of upx, this means that we can't use upx to statically unpack it. When we try to unpack it we get the message:\
 `upx: crackme2: NotPackedException: not packed by UPX`\
-Let's try dynamic unpacking! First, I'll open the binary in a arch linux docker image and see what it calls using strace:
+Let's try dynamic unpacking! First, I'll open the binary in an Arch docker image and see what it calls using strace:
 ```
 ...
 mprotect(0x4bd000, 12288, PROT_READ)    = 0
@@ -46,10 +46,10 @@ h@3779c8b06506 /root> cat /proc/164/maps
 004c0000-004c4000 rw-p 00000000 00:00 0
 ...
 ```
-Now, in gdb, we can dump the memory using the gdb command `dump memory newbinary.bin 0x00400000 0x004c4000`.
+Now, in gdb, we can dump the memory using the command `dump memory newbinary.bin 0x00400000 0x004c4000`.
 
 # Actually reverse engineering the binary
-We are greated with a standard libc_start_main type of _start, making the main identification easy. The main itself seems to call strlen but the function itself is destroyed, but we can assume that it wants a string length of 6. The actual check is sub_401d05. The first arguement is the user input, the second arguement is the string "lAmBdA", and the last arguement is 0x0203020305 (finding this is a bit confusing using decompilation, but by either emulation or looking at the assembly you can confirm it). As for sub_401d05 itself:
+We are greeted with a standard libc_start_main type of _start, making the main identification easy. The main itself seems to call strlen but the function itself is destroyed, but we can assume that it wants a string length of 6. The actual check is sub_401d05. The first argument is the user input, the second argument is the string “lAmBdA”, and the last argument is 0x0203020305 (finding this is a bit confusing using decompilation, but by either emulation or looking at the assembly you can confirm it). As for sub_401d05 itself:
 ```c
 {
 int32_t var_c = 0;
