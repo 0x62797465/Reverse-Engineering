@@ -1,6 +1,5 @@
 # Background
-![image](https://github.com/user-attachments/assets/028bc282-e819-4b17-a885-3376aa0f1e7c)\
-Someone was looking at a crackme I made and said this. So I looked throughout dozens of discord servers and found a crackme that *they* made. 
+This is a crackme that was used for hiring at an AV company.
 
 # Unpacking
 With DIE we can see that it uses:\
